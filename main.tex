@@ -1,0 +1,212 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,a4paper,roman]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% moderncv themes
+\moderncvstyle{classic}                           % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue}                               % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+\usepackage[utf8]{inputenc}          % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                 % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+\usepackage[scale=0.85]{geometry}
+\setlength{\hintscolumnwidth}{35mm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+\newcommand{\cvdoublecolumn}[2]{%
+  \cvline{}{%
+    \begin{minipage}[t]{\listdoubleitemmaincolumnwidth}#1\end{minipage}%
+    \hfill%
+    \begin{minipage}[t]{\listdoubleitemmaincolumnwidth}#2\end{minipage}%
+    }%
+}
+
+\newcommand{\cvreference}[7]{%
+    \textbf{#1}\newline% Name
+    \ifthenelse{\equal{#2}{}}{}{\addresssymbol~#2\newline}%
+    \ifthenelse{\equal{#3}{}}{}{#3\newline}%
+    \ifthenelse{\equal{#4}{}}{}{#4\newline}%
+    \ifthenelse{\equal{#5}{}}{}{#5\newline}%
+    \ifthenelse{\equal{#6}{}}{}{\emailsymbol~\texttt{#6}\newline}%
+    \ifthenelse{\equal{#7}{}}{}{\phonesymbol~#7}}
+
+% personal data
+\name{Jakub}{Kvita}
+%\title{Resumé title}                               % optional, remove / comment the line if not wanted
+\address{Zauličí 194}{Štramberk 742 66}{The Czech Republic}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
+\phone[mobile]{\href{tel:+420702973246}{+420~702~973~246}}                   % optional, remove / comment the line if not wanted
+%\phone[fixed]{+2~(345)~678~901}                    % optional, remove / comment the line if not wanted
+%\phone[fax]{+3~(456)~789~012}                      % optional, remove / comment the line if not wanted
+\email{kvitajakub@gmail.com}                               % optional, remove / comment the line if not wanted
+\homepage{www.linkedin.com/in/kvitajakub}    % optional, remove / comment the line if not wanted
+%\extrainfo{additional information}                 % optional, remove / comment the line if not wanted
+\photo[100pt][0.4pt]{fig/2013.png}                 % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+%\quote{Some quote}                                 % optional, remove / comment the line if not wanted
+
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+
+\section{Education}
+\cventry{2013 -- present}{M.Sc.}{\href{http://www.vutbr.cz/en/}{Brno University of Technology}}{Faculty of Information Technology}{\href{https://maps.google.com/maps?&q=Brno}{Brno}}{Computer Graphics and Multimedia course.}
+\cventry{2013 -- 2014}{M.Sc.}{\href{http://www.southwales.ac.uk/}{University of South Wales}}{Faculty of Computing, Engineering and Science}{\href{https://maps.google.com/maps?q=Cardiff}{Cardiff}, Great Britain}{Exchange student, Erasmus programme.}
+\cventry{2010 -- 2013}{B.Sc.}{\href{http://www.vutbr.cz/en/}{Brno University of Technology}}{Faculty of Information Technology}{\href{https://maps.google.com/maps?&q=Brno}{Brno}}{}  % arguments 3 to 6 can be left empty
+
+\section{Experience}
+%\subsection{Vocational}
+\cventry{june 2014 -- present}{Quality Assurance Engineer}{\href{www.redhat.com}{Red Hat}}{\href{https://maps.google.com/maps?&q=Brno}{Brno}}{}{Member of \emph{Entitlement} team focused on Content and SKU testing - testing correctness of CDN content and subscriptions of customers in international team using Git, Bash and Python. Everyday communication with Chinese and American colleagues.}
+%Detailed achievements:%
+%\begin{itemize}%
+%\item Achievement 1;
+%\item Achievement 2, with sub-achievements:
+% \begin{itemize}%
+%  \item Sub-achievement (a);
+%  \item Sub-achievement (b), with sub-sub-achievements (don't do this!);
+%    \begin{itemize}
+%    \item Sub-sub-achievement i;
+%   \item Sub-sub-achievement ii;
+%   \item Sub-sub-achievement iii;
+%   \end{itemize}
+% \item Sub-achievement (c);
+% \end{itemize}
+%item Achievement 3.
+%end{itemize}}
+%\cventry{year--year}{Job title}{Employer}{City}{}{Description line 1\newline{}Description line 2}
+%\subsection{Miscellaneous}
+%\cventry{2012}{Forest Keeper}{Lesnicko–dřevařská firma, s.r.o.}{Zubří}{}{Maintaining forests.}
+
+\section{Courses and Certificates}
+\cvitem{june 2014}{Computer Vision and Intelligent Computer Systems. \emph{Intensive course at \href{http://en.u-bourgogne.fr/}{University of Burgundy}, France.}}
+\cvitem{may 2013}{Cambridge ESOL FCE. \emph{Certificate in english, level C1.}}
+\cvitem{january 2013}{Cisco Certified Network Associate. \emph{Routing and Switching.}}
+\cvitem{may 2012}{Conflicts and Assertivity. \emph{Soft skills course.}}
+\cvitem{january 2012}{Microsoft Certified Technology Specialist: Windows 7, Configuration.}
+\cvitem{june 2009}{Driving License.}
+
+\section{Languages}
+\cvitemwithcomment{Czech}{native}{}
+\cvitemwithcomment{English}{fluent}{Level C1 certificate. Can use language flexibly and effectively.}
+\cvitemwithcomment{Russian}{intermediate}{Can understand and deal with most common situations.}
+\cvitemwithcomment{Slovak}{proficient}{Able to communicate at social, academic and professional level.}
+
+\section{Skills}
+%\cvdoubleitem{category 1}{XXX, YYY, ZZZ}{category 4}{XXX, YYY, ZZZ}
+%\cvdoubleitem{category 2}{XXX, YYY, ZZZ}{category 5}{XXX, YYY, ZZZ}
+%\cvdoubleitem{category 3}{XXX, YYY, ZZZ}{category 6}{XXX, YYY, ZZZ}
+\cvitem{Languages}{Python, Java, C/C++, Bash, SQL, Javascript, HTML+CSS}
+\cvitem{Software}{UNIX/Linux, Git+SVN, OpenGL, OpenCV, \LaTeX, Ant, Matlab, Vim, Eclipse}
+\cvitem{Concepts}{3D modelling, Computer Vision, classification, threading, neural networks, TCP/IP, network  administration and security, UML,software development}
+
+
+\section{Bachelor thesis}
+\cvitem{Title}{\href{https://github.com/kvitajakub/BachelorThesis/blob/master/bakalarka\%20-\%20wis.pdf?raw=true}{\emph{Generator of 3D objects based on L-Systems.}}}
+\cvitem{Supervisor}{\href{http://www.fit.vutbr.cz/~ivrabel/index.php.en}{Lukáš Vrábel}}
+\cvitem{Description}{Interactive application for generating and viewing 3D models using OpenGL. System is able to model fractals and simulate growth of plants through L-system rules and turtle graphics.}
+
+\section{Other Projects}
+\subsection{Master projects}
+\cventry{C++, OpenCV}{\href{https://github.com/kvitajakub/VideoStabilization}{Video Stabilization}}{Brno University of Technology}{}{}{Command line tool for stabilizing videos with a lot of options. Two different methods can be used - GrayCoded bitplane matching and KLT tracker with SVD. Team of 2 people.}
+\cventry{Python, OpenCV}{\href{https://github.com/kvitajakub/VideoFiltering}{Video Filtering}}{Brno University of Technology}{}{}{Video player, which can apply in real time image filters, e.g. blurring and sharpening, Canny, histogram equalization, etc.}
+
+\subsection{Bachelor Projects}
+\cventry{C++, Kinect}{\href{https://github.com/kvitajakub/KinectMarathon}{App manager for Kinect}}{Kinect Marathon at BUT}{}{}{Application manager for Kinect our team created during 48 hours of Kinect Marathon competition. Team of 3 people.}
+\cventry{Javascript}{\href{https://github.com/kvitajakub/DieCurve}{Die Curve}}{Brno University of Technology}{}{}{Javascript copy of famous Curve Fever game, played with multiple people on one computer.}
+
+\section{Qualities}
+\cvline{Personal skills}{Strong analytical and complex thinking, focused on solving the problem and keeping schedule, direct communication, self-reflection - can admit mistakes, open-minded.}
+\cvline{International Experience}{Lived and studied in Cardiff, The United Kingdom, for half a year at university with a lot of international students, including for example Brazilians and Malaysians.\newline Attended course in France, for 14 days, with many European and Indian students.\newline Working at Red Hat in international team and communicate every day with colleagues from Hungary, China and US.}
+
+\section{References}
+% Libin Liu (刘俐斌)
+\cvdoublecolumn{\cvreference{Libin Liu}
+    {\emph{Red Hat} - Quality Assurance Engineer}
+    {9/F, North Tower C, Raycom Infotech Park No.2, Ke Xueyuan Nanlu}
+	{Haidian, Beijing 100080, China}
+    {}
+    {\href{mailto:liliu@redhat.com}{liliu@redhat.com}}
+    {\href{tel:+861062608319}{+86 10 62608319}}%
+    }
+    {\cvreference{\href{https://www.linkedin.com/in/martinkoci}{Martin Kočí}}
+    {\emph{Red Hat} - Quality Engineering Manager}
+    {Purkyňova 3080/97B}
+    {Brno 612 45, Czech Republic}
+    {}
+    {\href{mailto:mkoci@redhat.com}{mkoci@redhat.com}}
+    {\href{tel:+420702204894}{+420 702 204 894}}%
+    }
+
+\end{document}
+
+%\section{References}
+%\begin{cvcolumns}
+%  \cvcolumn{Category 1}{\begin{itemize}\item Person 1\item Person 2\item Person 3\end{itemize}}
+%  \cvcolumn{Category 2}{Amongst others:\begin{itemize}\item Person 1, and\item Person 2\end{itemize}(more upon request)}
+%  \cvcolumn[0.5]{All the rest \& some more}{\textit{That} person, and \textbf{those} also (all available upon request).}
+%\end{cvcolumns}
+
+% Publications from a BibTeX file without multibib
+%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
+%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
+\nocite{*}
+\bibliographystyle{plain}
+\bibliography{publications}                        % 'publications' is the name of a BibTeX file
+
+% Publications from a BibTeX file using the multibib package
+%\section{Publications}
+%\nocitebook{book1,book2}
+%\bibliographystylebook{plain}
+%\bibliographybook{publications}                   % 'publications' is the name of a BibTeX file
+%\nocitemisc{misc1,misc2,misc3}
+%\bibliographystylemisc{plain}
+%\bibliographymisc{publications}                   % 'publications' is the name of a BibTeX file
+
+\clearpage
+%-----       letter       ---------------------------------------------------------
+% recipient data
+\recipient{Company Recruitment team}{Company, Inc.\\123 somestreet\\some city}
+\date{January 01, 1984}
+\opening{Dear Sir or Madam,}
+\closing{Yours faithfully,}
+\enclosure[Attached]{curriculum vit\ae{}}          % use an optional argument to use a string other than "Enclosure", or redefine \enclname
+\makelettertitle
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ullamcorper neque sit amet lectus facilisis sed luctus nisl iaculis. Vivamus at neque arcu, sed tempor quam. Curabitur pharetra tincidunt tincidunt. Morbi volutpat feugiat mauris, quis tempor neque vehicula volutpat. Duis tristique justo vel massa fermentum accumsan. Mauris ante elit, feugiat vestibulum tempor eget, eleifend ac ipsum. Donec scelerisque lobortis ipsum eu vestibulum. Pellentesque vel massa at felis accumsan rhoncus.
+
+Suspendisse commodo, massa eu congue tincidunt, elit mauris pellentesque orci, cursus tempor odio nisl euismod augue. Aliquam adipiscing nibh ut odio sodales et pulvinar tortor laoreet. Mauris a accumsan ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse vulputate sem vehicula ipsum varius nec tempus dui dapibus. Phasellus et est urna, ut auctor erat. Sed tincidunt odio id odio aliquam mattis. Donec sapien nulla, feugiat eget adipiscing sit amet, lacinia ut dolor. Phasellus tincidunt, leo a fringilla consectetur, felis diam aliquam urna, vitae aliquet lectus orci nec velit. Vivamus dapibus varius blandit.
+
+Duis sit amet magna ante, at sodales diam. Aenean consectetur porta risus et sagittis. Ut interdum, enim varius pellentesque tincidunt, magna libero sodales tortor, ut fermentum nunc metus a ante. Vivamus odio leo, tincidunt eu luctus ut, sollicitudin sit amet metus. Nunc sed orci lectus. Ut sodales magna sed velit volutpat sit amet pulvinar diam venenatis.
+
+Albert Einstein discovered that $e=mc^2$ in 1905.
+
+\[ e=\lim_{n \to \infty} \left(1+\frac{1}{n}\right)^n \]
+
+\makeletterclosing
+
+%\clearpage\end{CJK*}                              % if you are typesetting your resume in Chinese using CJK; the \clearpage is required for fancyhdr to work correctly with CJK, though it kills the page numbering by making \lastpage undefined
+\end{document}
+
+
+%% end of file `template.tex'.
