@@ -40,6 +40,8 @@
     \ifthenelse{\equal{#6}{}}{}{\emailsymbol~\texttt{#6}\newline}%
     \ifthenelse{\equal{#7}{}}{}{\phonesymbol~#7}}
 
+\newcommand{\BUT}{\href{http://www.vutbr.cz/en/}{Brno University of Technology}}
+
 % personal data
 \name{Jakub}{Kvita}
 %\title{Resumé title}                               % optional, remove / comment the line if not wanted
@@ -70,6 +72,7 @@
 %-----       resume       ---------------------------------------------------------
 \makecvtitle
 
+%\justify
 \section{Education}
 \cventry{2013 -- present}{M.Sc.}{\href{http://www.vutbr.cz/en/}{Brno University of Technology}}{Faculty of Information Technology}{\href{https://maps.google.com/maps?&q=Brno}{Brno}}{Computer Graphics and Multimedia course.}
 \cventry{2013 -- 2014}{M.Sc.}{\href{http://www.southwales.ac.uk/}{University of South Wales}}{Faculty of Computing, Engineering and Science}{\href{https://maps.google.com/maps?q=Cardiff}{Cardiff}, Great Britain}{Exchange student, Erasmus programme.}
@@ -99,7 +102,7 @@
 %\cventry{2012}{Forest Keeper}{Lesnicko–dřevařská firma, s.r.o.}{Zubří}{}{Maintaining forests.}
 
 \section{Courses and Certificates}
-\cvitem{june 2014}{Computer Vision and Intelligent Computer Systems. \emph{Intensive course at \href{http://en.u-bourgogne.fr/}{University of Burgundy}, France.}}
+\cvitem{june 2014}{Computer Vision and Intelligent Computer Systems. Intensive course at \emph{\href{http://en.u-bourgogne.fr/}{University of Burgundy}, France.}}
 \cvitem{may 2013}{Cambridge ESOL FCE. \emph{Certificate in english, level C1.}}
 \cvitem{january 2013}{Cisco Certified Network Associate. \emph{Routing and Switching.}}
 \cvitem{may 2012}{Conflicts and Assertivity. \emph{Soft skills course.}}
@@ -109,7 +112,7 @@
 \section{Languages}
 \cvitemwithcomment{Czech}{native}{}
 \cvitemwithcomment{English}{fluent}{Level C1 certificate. Can use language flexibly and effectively.}
-\cvitemwithcomment{Russian}{intermediate}{Can understand and deal with most common situations.}
+\cvitemwithcomment{Russian}{pre-intermediate}{Can understand and deal with most common situations.}
 \cvitemwithcomment{Slovak}{proficient}{Able to communicate at social, academic and professional level.}
 
 \section{Skills}
@@ -117,8 +120,8 @@
 %\cvdoubleitem{category 2}{XXX, YYY, ZZZ}{category 5}{XXX, YYY, ZZZ}
 %\cvdoubleitem{category 3}{XXX, YYY, ZZZ}{category 6}{XXX, YYY, ZZZ}
 \cvitem{Languages}{Python, Java, C/C++, Bash, SQL, Javascript, HTML+CSS}
-\cvitem{Software}{UNIX/Linux, Git+SVN, OpenGL, OpenCV, \LaTeX, Ant, Matlab, Vim, Eclipse}
-\cvitem{Concepts}{3D modelling, Computer Vision, classification, threading, neural networks, TCP/IP, network  administration and security, UML,software development}
+\cvitem{Software}{UNIX/Linux, Git, Trac, OpenGL, OpenCV, \LaTeX, Matlab, Vim, Eclipse}
+\cvitem{Concepts}{3D modelling, rendering, computer vision, classification, threading, TCP/IP, network  administration and security, databases, UML, software development}
 
 
 \section{Bachelor thesis}
@@ -127,21 +130,40 @@
 \cvitem{Description}{Interactive application for generating and viewing 3D models using OpenGL. System is able to model fractals and simulate growth of plants through L-system rules and turtle graphics.}
 
 \section{Other Projects}
-\subsection{Master projects}
-\cventry{C++, OpenCV}{\href{https://github.com/kvitajakub/VideoStabilization}{Video Stabilization}}{Brno University of Technology}{}{}{Command line tool for stabilizing videos with a lot of options. Two different methods can be used - GrayCoded bitplane matching and KLT tracker with SVD. Team of 2 people.}
-\cventry{Python, OpenCV}{\href{https://github.com/kvitajakub/VideoFiltering}{Video Filtering}}{Brno University of Technology}{}{}{Video player, which can apply in real time image filters, e.g. blurring and sharpening, Canny, histogram equalization, etc.}
 
-\subsection{Bachelor Projects}
-\cventry{C++, Kinect}{\href{https://github.com/kvitajakub/KinectMarathon}{App manager for Kinect}}{Kinect Marathon at BUT}{}{}{Application manager for Kinect our team created during 48 hours of Kinect Marathon competition. Team of 3 people.}
-\cventry{Javascript}{\href{https://github.com/kvitajakub/DieCurve}{Die Curve}}{Brno University of Technology}{}{}{Javascript copy of famous Curve Fever game, played with multiple people on one computer.}
+%Number Plates Recognition
+\cventry{C++, OpenCV}{\href{https://github.com/kvitajakub/numberPlatesRecognition}{Number Plates Recognition}}{2014}{\BUT}{}{Computer vision tool, which takes picture, detect licence plates and use classifier to recognize letters. Then write them in the image.}
+
+%Raytracing Chess
+\cventry{C++, rendering}{\href{https://github.com/kvitajakub/raytracedChess}{Raytracing Chess}}{2014}{\BUT}{}{Renderer of chess models which is customizable with setting positions of all the game pieces, colours, lights, etc. Most of the code is created from scratch.}
+
+%Wineyard Management
+\cventry{Java, database}{\href{https://github.com/kvitajakub/ManagingWineyards}{Wineyard Management}}{2014}{\BUT}{}{Application for managing wineyards, connected to Oracle database as backend. Using spatial objects, images and work with temporal data.}
+
+% Video Stabilization
+\cventry{C++, OpenCV}{\href{https://github.com/kvitajakub/VideoStabilization}{Video Stabilization}}{2014}{\BUT}{}{Command line tool for stabilizing videos with a lot of options. Two different methods can be used - GrayCoded bitplane matching and KLT tracker with SVD. Team of 2 people.}
+
+% Video Filtering
+%\cventry{Python, OpenCV}{\href{https://github.com/kvitajakub/VideoFiltering}{Video Filtering}}{2014}{\BUT}{}{Video player, which can apply in real time image filters, e.g. blurring and sharpening, Canny, histogram equalization, etc.}
+
+% Kinect Marathon
+%\cventry{C++, Kinect}{\href{https://github.com/kvitajakub/KinectMarathon}{Kinect app manager}}{2012}{Kinect Marathon at \BUT}{}{Application manager for Kinect our team created during 48 hours of Kinect Marathon competition. Team of 3 people.}
+
+% Die Curve
+%\cventry{Javascript}{\href{https://github.com/kvitajakub/DieCurve}{Die Curve}}{2012}{\BUT}{}{Javascript copy of famous Curve Fever game, played with multiple people on one computer.}
+
+% Lua Interpreter
+\cventry{C, interpreters}{\href{https://github.com/kvitajakub/interpreterLua}{Lua Interpreter}}{2011}{\BUT}{}{Compiler of part of Lua to intermediate code, which was then interpreted. Grammars, parsing and interpreting.}
 
 \section{Qualities}
 \cvline{Personal skills}{Strong analytical and complex thinking, focused on solving the problem and keeping schedule, direct communication, self-reflection - can admit mistakes, open-minded.}
-\cvline{International Experience}{Lived and studied in Cardiff, The United Kingdom, for half a year at university with a lot of international students, including for example Brazilians and Malaysians.\newline Attended course in France, for 14 days, with many European and Indian students.\newline Working at Red Hat in international team and communicate every day with colleagues from Hungary, China and US.}
+\cvline{International Experience}{Lived and studied in Cardiff, The United Kingdom, for half a year at university with a lot of international students, including for example Brazilians and Malaysians. % \newline 
+Attended course in France, for 14 days, with many European and Indian students. % \newline 
+Working at Red Hat in international team and communicate every day with colleagues all around the globe - from Hungary and Russia to China, India and US.}
 
 \section{References}
 % Libin Liu (刘俐斌)
-\cvdoublecolumn{\cvreference{Libin Liu}
+\cvdoublecolumn{\cvreference{Liu Libin}
     {\emph{Red Hat} - Quality Assurance Engineer}
     {9/F, North Tower C, Raycom Infotech Park No.2, Ke Xueyuan Nanlu}
 	{Haidian, Beijing 100080, China}
