@@ -23,6 +23,18 @@
 \setlength{\hintscolumnwidth}{35mm}                % if you want to change the width of the column with the dates
 %\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
 
+% timeline in dates
+\usepackage{moderntimeline}
+% Set the scale.
+% I go up to 2013 otherwise some late dates overflow on the entry
+\tlmaxdates{2010}{2016}
+% Set the line width.
+% This automatically sets the space under the top label to be 1pt more
+\tlwidth{0.8ex}
+% Set the labels text size
+% \tltext{\tiny}
+
+
 \newcommand{\cvdoublecolumn}[2]{%
   \cvline{}{%
     \begin{minipage}[t]{\listdoubleitemmaincolumnwidth}#1\end{minipage}%
@@ -74,13 +86,14 @@
 
 %\justify
 \section{Education}
-\cventry{2013 -- present}{M.Sc.}{\href{http://www.vutbr.cz/en/}{Brno University of Technology}}{Faculty of Information Technology}{\href{https://maps.google.com/maps?&q=Brno}{Brno}}{Computer Graphics and Multimedia course.}
-\cventry{2013 -- 2014}{M.Sc.}{\href{http://www.southwales.ac.uk/}{University of South Wales}}{Faculty of Computing, Engineering and Science}{\href{https://maps.google.com/maps?q=Cardiff}{Cardiff}, Great Britain}{Exchange student, Erasmus programme.}
-\cventry{2010 -- 2013}{B.Sc.}{\href{http://www.vutbr.cz/en/}{Brno University of Technology}}{Faculty of Information Technology}{\href{https://maps.google.com/maps?&q=Brno}{Brno}}{}  % arguments 3 to 6 can be left empty
+\tlcventry{2013}{0}{M.Sc.}{\href{http://www.vutbr.cz/en/}{Brno University of Technology}}{Faculty of Information Technology}{\href{https://maps.google.com/maps?&q=Brno}{Brno}}{Computer Graphics and Multimedia course.}
+\tlcventry{2013}{2014}{M.Sc.}{\href{http://www.southwales.ac.uk/}{University of South Wales}}{Faculty of Computing, Engineering and Science}{\href{https://maps.google.com/maps?q=Cardiff}{Cardiff}, Great Britain}{Exchange student, Erasmus programme.}
+\tlcventry{2010}{2013}{B.Sc.}{\href{http://www.vutbr.cz/en/}{Brno University of Technology}}{Faculty of Information Technology}{\href{https://maps.google.com/maps?&q=Brno}{Brno}}{}  % arguments 3 to 6 can be left empty
 
 \section{Experience}
 %\subsection{Vocational}
-\cventry{june 2014 -- present}{Quality Assurance Engineer}{\href{www.redhat.com}{Red Hat}}{\href{https://maps.google.com/maps?&q=Brno}{Brno}}{}{Internship at \emph{Entitlement} team focused on Content and SKU testing - testing correctness of CDN content and subscriptions of customers in international team using Git, Bash and Python. Everyday communication with Chinese and American colleagues.}
+\tlcventry{2015}{0}{Quality Assurance Engineer}{\href{www.redhat.com}{Red Hat}}{\href{https://maps.google.com/maps?&q=Brno}{Brno}}{}{Internship at \emph{REST} team focused on Pulp API testing with Python on Amazon EC2 and Openstack cloud.}
+\tlcventry{2014}{2015}{Quality Assurance Engineer}{\href{www.redhat.com}{Red Hat}}{\href{https://maps.google.com/maps?&q=Brno}{Brno}}{}{Internship at \emph{Subscriptions} team focused on Content and SKU testing - testing CDN content and subscriptions of customers with Python in international team. Everyday communication with American and Chinese colleagues.}
 %Detailed achievements:%
 %\begin{itemize}%
 %\item Achievement 1;
@@ -102,12 +115,12 @@
 %\cventry{2012}{Forest Keeper}{Lesnicko–dřevařská firma, s.r.o.}{Zubří}{}{Maintaining forests.}
 
 \section{Courses and Certificates}
-\cvitem{june 2014}{Computer Vision and Intelligent Computer Systems. Intensive course at \emph{\href{http://en.u-bourgogne.fr/}{University of Burgundy}, France.}}
-\cvitem{may 2013}{Cambridge ESOL FCE. \emph{Certificate in english, level C1.}}
-\cvitem{january 2013}{Cisco Certified Network Associate. \emph{Routing and Switching.}}
-\cvitem{may 2012}{Conflicts and Assertivity. \emph{Soft skills course.}}
-\cvitem{january 2012}{Microsoft Certified Technology Specialist: Windows 7, Configuration.}
-\cvitem{june 2009}{Driving License.}
+\cvitem{June 2014}{Computer Vision and Intelligent Computer Systems. Intensive course at \emph{\href{http://en.u-bourgogne.fr/}{University of Burgundy}, France.}}
+\cvitem{May 2013}{Cambridge ESOL FCE. \emph{Certificate in english, level C1.}}
+\cvitem{January 2013}{Cisco Certified Network Associate. \emph{Routing and Switching.}}
+\cvitem{May 2012}{Conflicts and Assertivity. \emph{Soft skills course.}}
+\cvitem{January 2012}{Microsoft Certified Technology Specialist: Windows 7, Configuration.}
+\cvitem{June 2009}{Driving License.}
 
 \section{Languages}
 \cvitemwithcomment{Czech}{native}{}
@@ -144,7 +157,7 @@
 \cventry{C++, OpenCV}{\href{https://github.com/kvitajakub/VideoStabilization}{Video Stabilization}}{2014}{\BUT}{}{Command line tool for stabilizing videos with a lot of options. Two different methods can be used - GrayCoded bitplane matching and KLT tracker with SVD. Team of 2 people.}
 
 % Video Filtering
-%\cventry{Python, OpenCV}{\href{https://github.com/kvitajakub/VideoFiltering}{Video Filtering}}{2014}{\BUT}{}{Video player, which can apply in real time image filters, e.g. blurring and sharpening, Canny, histogram equalization, etc.}
+\cventry{Python, OpenCV}{\href{https://github.com/kvitajakub/VideoFiltering}{Video Filtering}}{2014}{\BUT}{}{Video player, which can apply in real time image filters, e.g. blurring and sharpening, Canny, histogram equalization, etc.}
 
 % Kinect Marathon
 %\cventry{C++, Kinect}{\href{https://github.com/kvitajakub/KinectMarathon}{Kinect app manager}}{2012}{Kinect Marathon at \BUT}{}{Application manager for Kinect our team created during 48 hours of Kinect Marathon competition. Team of 3 people.}
@@ -159,7 +172,7 @@
 \cvline{Personal skills}{Strong analytical and complex thinking, focused on solving the problem and keeping schedule, direct communication, self-reflection - can admit mistakes, open-minded.}
 \cvline{International Experience}{Lived and studied in Cardiff, The United Kingdom, for half a year at university with a lot of international students, including for example Brazilians and Malaysians. % \newline 
 Attended course in France, for 14 days, with many European and Indian students. % \newline 
-Working at Red Hat in international team and communicate every day with colleagues all around the globe - from Hungary and Russia to China, India and US.}
+Working at Red Hat in international team and communicate every day with colleagues all around the globe - from US, Hungary and Russia to India and China.}
 
 \section{References}
 % Libin Liu (刘俐斌)
