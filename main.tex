@@ -27,7 +27,7 @@
 \usepackage{moderntimeline}
 % Set the scale.
 % I go up to 2013 otherwise some late dates overflow on the entry
-\tlmaxdates{2010}{2016}
+\tlmaxdates{2010}{2018}
 % Set the line width.
 % This automatically sets the space under the top label to be 1pt more
 \tlwidth{0.8ex}
@@ -55,6 +55,7 @@
     \ifthenelse{\equal{#7}{}}{}{\phonesymbol~#7}}
 
 \newcommand{\BUT}{\href{http://www.vutbr.cz/en/}{Brno University of Technology}}
+\newcommand{\Brno}{\href{https://maps.google.com/maps?&q=Brno}{Brno}}
 
 % personal data
 \name{Jakub}{Kvita}
@@ -85,17 +86,20 @@
 %\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
 %-----       resume       ---------------------------------------------------------
 \makecvtitle
-
 %\justify
 \section{Education}
-\tlcventry{2013}{0}{M.Sc.}{\href{http://www.vutbr.cz/en/}{Brno University of Technology}}{Faculty of Information Technology}{\href{https://maps.google.com/maps?&q=Brno}{Brno}}{Computer Graphics and Multimedia course.}
-\tlcventry{2013}{2014}{M.Sc.}{\href{http://www.southwales.ac.uk/}{University of South Wales}}{Faculty of Computing, Engineering and Science}{\href{https://maps.google.com/maps?q=Cardiff}{Cardiff}, Great Britain}{Exchange student, Erasmus programme.}
-\tlcventry{2010}{2013}{B.Sc.}{\href{http://www.vutbr.cz/en/}{Brno University of Technology}}{Faculty of Information Technology}{\href{https://maps.google.com/maps?&q=Brno}{Brno}}{}  % arguments 3 to 6 can be left empty
+\tlcventry{2013}{2016}{M.Sc.}{\BUT}{Faculty of Information Technology}{\Brno}{Computer Graphics and Multimedia course.}
+\tlcventry{2013}{2014}{M.Sc.}{\href{http://www.southwales.ac.uk/}{University of South Wales}}{Faculty of Computing, Engineering and Science}{\href{https://maps.google.com/maps?q=Cardiff}{Cardiff}}{Exchange student, Erasmus programme.}
+\tlcventry{2010}{2013}{B.Sc.}{\BUT}{Faculty of Information Technology}{\Brno}{}  % arguments 3 to 6 can be left empty
 
 \section{Experience}
 %\subsection{Vocational}
-\tlcventry{2015}{0}{Quality Assurance Engineer}{\href{www.redhat.com}{Red Hat}}{\href{https://maps.google.com/maps?&q=Brno}{Brno}}{}{Internship at \emph{REST} team focused on Pulp API testing with Python on Amazon EC2 and Openstack cloud.}
-\tlcventry{2014}{2015}{Quality Assurance Engineer}{\href{www.redhat.com}{Red Hat}}{\href{https://maps.google.com/maps?&q=Brno}{Brno}}{}{Internship at \emph{Subscriptions} team focused on Content and SKU testing - testing CDN content and subscriptions of customers with Python in international team. Everyday communication with American and Chinese colleagues.}
+{\tltextstart[base]{\scriptsize}
+	\tllabelcventry{2015.7}{2015.8}{2015/7 -- 2015/8}{OpenLab Summer Student}{\href{http://openlab.web.cern.ch/}{CERN}}{\href{https://www.google.com/maps?&q=Geneve}{Genève}}{}{Internship at \emph{Cloud \& Virtualization} team. I explored solutions for archiving Openstack Cinder volumes using Cinder backup feature and existing CERN infrastructure. Using CERN OpenStack cloud, Ceph clusters, TSM tape storage.}
+
+	\tllabelcventry{2015.1}{2015.6}{2015/2 -- 2015/6}{Quality Assurance Engineer}{\href{www.redhat.com}{Red Hat}}{\Brno}{}{Internship at \emph{REST} team focused on Pulp API testing on Amazon EC2 and Openstack cloud. Using Python and Nosetests.}
+}
+\tlcventry{2014}{2015}{Quality Assurance Engineer}{\href{www.redhat.com}{Red Hat}}{\Brno}{}{Internship at \emph{Subscriptions} team focused on testing CDN content and subscriptions of customers. Everyday communication with American and Chinese colleagues.}
 %Detailed achievements:%
 %\begin{itemize}%
 %\item Achievement 1;
@@ -141,8 +145,8 @@
 
 \section{Bachelor thesis}
 \cvitem{Title}{\href{https://github.com/kvitajakub/BachelorThesis/blob/master/bakalarka\%20-\%20wis.pdf?raw=true}{\emph{Generator of 3D objects based on L-Systems.}}}
-\cvitem{Supervisor}{\href{http://www.fit.vutbr.cz/~ivrabel/index.php.en}{Lukáš Vrábel}}
-\cvitem{Description}{Interactive application for generating and viewing 3D models using OpenGL. System is able to model fractals and simulate growth of plants through L-system rules and turtle graphics.}
+%\cvitem{Supervisor}{\href{http://www.fit.vutbr.cz/~ivrabel/index.php.en}{Lukáš Vrábel}}
+\cvitem{Description}{Interactive application for generating and viewing 3D models using OpenGL. System is able to model fractals and simulate growth of plants through L-system rules.}
 
 \section{Other Projects}
 
@@ -153,7 +157,7 @@
 \cventry{C++, rendering}{\href{https://github.com/kvitajakub/raytracedChess}{Raytracing Chess}}{2014}{\BUT}{}{Renderer of chess models which is customizable with setting positions of all the game pieces, colours, lights, etc. Most of the code is created from scratch.}
 
 %Wineyard Management
-\cventry{Java, database}{\href{https://github.com/kvitajakub/ManagingWineyards}{Wineyard Management}}{2014}{\BUT}{}{Application for managing wineyards, connected to Oracle database as backend. Using spatial objects, images and work with temporal data.}
+%\cventry{Java, database}{\href{https://github.com/kvitajakub/ManagingWineyards}{Wineyard Management}}{2014}{\BUT}{}{Application for managing wineyards, connected to Oracle database as backend. Using spatial objects, images and work with temporal data.}
 
 % Video Stabilization
 \cventry{C++, OpenCV}{\href{https://github.com/kvitajakub/VideoStabilization}{Video Stabilization}}{2014}{\BUT}{}{Command line tool for stabilizing videos with a lot of options. Two different methods can be used - GrayCoded bitplane matching and KLT tracker with SVD. Team of 2 people.}
