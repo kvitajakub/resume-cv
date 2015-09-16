@@ -43,6 +43,7 @@
     \hfill%
     \begin{minipage}[t]{\listdoubleitemmaincolumnwidth}#2\end{minipage}%
     }%
+  \vspace{12pt}   
 }
 
 \newcommand{\cvreference}[7]{%
@@ -54,8 +55,8 @@
     \ifthenelse{\equal{#6}{}}{}{\emailsymbol~\texttt{#6}\newline}%
     \ifthenelse{\equal{#7}{}}{}{\phonesymbol~#7}}
 
+\newcommand{\googlemap}[1]{\href{https://maps.google.com/maps?&q=#1}{#1}}
 \newcommand{\BUT}{\href{http://www.vutbr.cz/en/}{Brno University of Technology}}
-\newcommand{\Brno}{\href{https://maps.google.com/maps?&q=Brno}{Brno}}
 
 % personal data
 \name{Jakub}{Kvita}
@@ -88,18 +89,18 @@
 \makecvtitle
 %\justify
 \section{Education}
-\tlcventry{2013}{2016}{M.Sc.}{\BUT}{Faculty of Information Technology}{\Brno}{Computer Graphics and Multimedia course.}
-\tlcventry{2013}{2014}{M.Sc.}{\href{http://www.southwales.ac.uk/}{University of South Wales}}{Faculty of Computing, Engineering and Science}{\href{https://maps.google.com/maps?q=Cardiff}{Cardiff}}{Exchange student, Erasmus programme.}
-\tlcventry{2010}{2013}{B.Sc.}{\BUT}{Faculty of Information Technology}{\Brno}{}  % arguments 3 to 6 can be left empty
+\tlcventry{2013}{2016}{M.Sc.}{\BUT}{Faculty of Information Technology}{\googlemap{Brno}}{Computer Graphics and Multimedia course.}
+\tlcventry{2013}{2014}{M.Sc.}{\href{http://www.southwales.ac.uk/}{University of South Wales}}{Faculty of Computing, Engineering and Science}{\googlemap{Cardiff}}{Exchange student, Erasmus programme.}
+\tlcventry{2010}{2013}{B.Sc.}{\BUT}{Faculty of Information Technology}{\googlemap{Brno}}{}
 
 \section{Experience}
 %\subsection{Vocational}
 {\tltextstart[base]{\scriptsize}
-	\tllabelcventry{2015.7}{2015.8}{2015/7 -- 2015/8}{OpenLab Summer Student}{\href{http://openlab.web.cern.ch/}{CERN}}{\href{https://www.google.com/maps?&q=Geneve}{Genève}}{}{Internship at \emph{Cloud \& Virtualization} team. I explored solutions for archiving Openstack Cinder volumes using Cinder backup feature and existing CERN infrastructure. Using CERN OpenStack cloud, Ceph clusters, TSM tape storage.}
+	\tllabelcventry{2015.7}{2015.8}{2015/7 -- 2015/8}{OpenLab Summer Student}{\href{http://openlab.web.cern.ch/}{CERN}}{\googlemap{Genève}}{}{Internship at \emph{Cloud \& Virtualization} team. I explored solutions for archiving Openstack Cinder volumes using Cinder backup feature and existing CERN infrastructure. Using CERN OpenStack cloud, Ceph clusters, TSM tape storage.}
 
-	\tllabelcventry{2015.1}{2015.6}{2015/2 -- 2015/6}{Quality Assurance Engineer}{\href{www.redhat.com}{Red Hat}}{\Brno}{}{Internship at \emph{REST} team focused on Pulp API testing on Amazon EC2 and Openstack cloud. Using Python and Nosetests.}
+	\tllabelcventry{2015.1}{2015.6}{2015/2 -- 2015/6}{Quality Assurance Engineer}{\href{www.redhat.com}{Red Hat}}{\googlemap{Brno}}{}{Internship at \emph{REST} team focused on Pulp API testing on Amazon EC2 and Openstack cloud. Using Python and Nosetest.}
 }
-\tlcventry{2014}{2015}{Quality Assurance Engineer}{\href{www.redhat.com}{Red Hat}}{\Brno}{}{Internship at \emph{Subscriptions} team focused on testing CDN content and subscriptions of customers. Everyday communication with American and Chinese colleagues.}
+\tlcventry{2014}{2015}{Quality Assurance Engineer}{\href{www.redhat.com}{Red Hat}}{\googlemap{Brno}}{}{Internship at \emph{Subscriptions} team focused on testing CDN content and subscriptions of customers. Everyday communication with American and Chinese colleagues.}
 %Detailed achievements:%
 %\begin{itemize}%
 %\item Achievement 1;
@@ -138,32 +139,34 @@
 %\cvdoubleitem{category 1}{XXX, YYY, ZZZ}{category 4}{XXX, YYY, ZZZ}
 %\cvdoubleitem{category 2}{XXX, YYY, ZZZ}{category 5}{XXX, YYY, ZZZ}
 %\cvdoubleitem{category 3}{XXX, YYY, ZZZ}{category 6}{XXX, YYY, ZZZ}
-\cvitem{Languages}{Python, Java, C/C++, Bash, SQL, Javascript, HTML+CSS}
-\cvitem{Software}{UNIX/Linux, Git, Trac, OpenGL, OpenCV, \LaTeX, Matlab, Vim, Eclipse}
-\cvitem{Concepts}{3D modelling, rendering, computer vision, classification, threading, TCP/IP, network  administration and security, databases, UML, software development}
+\cvitem{Languages}{Python, Java, C/C++, Bash, SQL}
+\cvitem{Software}{OpenStack, Ceph, UNIX/Linux, Git, Trac, OpenGL, OpenCV, Matlab}
+\cvitem{Concepts}{machine learning, threading, TCP/IP, network administration and security, rendering, 3D modeling, computer vision, databases, software development}
 
 
-\section{Bachelor thesis}
-\cvitem{Title}{\href{https://github.com/kvitajakub/BachelorThesis/blob/master/bakalarka\%20-\%20wis.pdf?raw=true}{\emph{Generator of 3D objects based on L-Systems.}}}
-%\cvitem{Supervisor}{\href{http://www.fit.vutbr.cz/~ivrabel/index.php.en}{Lukáš Vrábel}}
-\cvitem{Description}{Interactive application for generating and viewing 3D models using OpenGL. System is able to model fractals and simulate growth of plants through L-system rules.}
+%\section{Bachelor thesis}
+%\cvitem{Title}{\href{https://github.com/kvitajakub/BachelorThesis/blob/master/bakalarka\%20-\%20wis.pdf?raw=true}{\emph{Generator of 3D objects based on L-Systems.}}}
+%%\cvitem{Supervisor}{\href{http://www.fit.vutbr.cz/~ivrabel/index.php.en}{Lukáš Vrábel}}
+%\cvitem{Description}{Interactive application for generating and viewing 3D models using OpenGL. System is able to model fractals and simulate growth of plants through L-system rules.}
 
-\section{Other Projects}
+\section{Projects}
+%Processor Cooler Simulation
+\cventry{OpenMP, OpenMPI}{\href{https://github.com/kvitajakub/coolerSimulation}{Processor Cooler Simulation}}{2015}{\BUT}{}{Parallel simulation of heat diffusion in cooler mounted on processor. Two implementations created - first with OpenMP, second with OpenMPI.}
 
 %Number Plates Recognition
-\cventry{C++, OpenCV}{\href{https://github.com/kvitajakub/numberPlatesRecognition}{Number Plates Recognition}}{2014}{\BUT}{}{Computer vision tool, which takes picture, detect licence plates and use classifier to recognize letters. Then write them in the image.}
+\cventry{OpenCV}{\href{https://github.com/kvitajakub/numberPlatesRecognition}{Number Plates Recognition}}{2014}{\BUT}{}{Computer vision tool, which takes picture, detect licence plates, use classifier to recognize letters and then write them in the image.}
 
 %Raytracing Chess
-\cventry{C++, rendering}{\href{https://github.com/kvitajakub/raytracedChess}{Raytracing Chess}}{2014}{\BUT}{}{Renderer of chess models which is customizable with setting positions of all the game pieces, colours, lights, etc. Most of the code is created from scratch.}
+\cventry{rendering}{\href{https://github.com/kvitajakub/raytracedChess}{Raytracing Chess}}{2014}{\BUT}{}{Renderer of chess models which is customizable with setting positions of all the game pieces, colours, lights, etc.}
 
 %Wineyard Management
 %\cventry{Java, database}{\href{https://github.com/kvitajakub/ManagingWineyards}{Wineyard Management}}{2014}{\BUT}{}{Application for managing wineyards, connected to Oracle database as backend. Using spatial objects, images and work with temporal data.}
 
 % Video Stabilization
-\cventry{C++, OpenCV}{\href{https://github.com/kvitajakub/VideoStabilization}{Video Stabilization}}{2014}{\BUT}{}{Command line tool for stabilizing videos with a lot of options. Two different methods can be used - GrayCoded bitplane matching and KLT tracker with SVD. Team of 2 people.}
+\cventry{OpenCV}{\href{https://github.com/kvitajakub/VideoStabilization}{Video Stabilization}}{2014}{\BUT}{}{Command line tool for stabilizing videos with a lot of options. Two different methods can be used - GrayCoded bitplane matching and KLT tracker with SVD.}
 
 % Video Filtering
-\cventry{Python, OpenCV}{\href{https://github.com/kvitajakub/VideoFiltering}{Video Filtering}}{2014}{\BUT}{}{Video player, which can apply in real time image filters, e.g. blurring and sharpening, Canny, histogram equalization, etc.}
+%\cventry{Python, OpenCV}{\href{https://github.com/kvitajakub/VideoFiltering}{Video Filtering}}{2014}{\BUT}{}{Video player, which can apply in real time image filters, e.g. blurring and sharpening, Canny, histogram equalization, etc.}
 
 % Kinect Marathon
 %\cventry{C++, Kinect}{\href{https://github.com/kvitajakub/KinectMarathon}{Kinect app manager}}{2012}{Kinect Marathon at \BUT}{}{Application manager for Kinect our team created during 48 hours of Kinect Marathon competition. Team of 3 people.}
@@ -176,35 +179,40 @@
 
 \section{Qualities}
 \cvline{Personal skills}{Strong analytical and complex thinking, focused on solving the problem and keeping schedule, direct communication, self-reflection - can admit mistakes, open-minded.}
-\cvline{International Experience}{Lived and studied in Cardiff, The United Kingdom, for half a year at university with a lot of international students, including for example Brazilians and Malaysians. % \newline 
-Attended course in France, for 14 days, with many European and Indian students. % \newline 
-Working at Red Hat in international team and communicate every day with colleagues all around the globe - from US, Hungary and Russia to India and China.}
+
+\cvline{International Experience}{Lived in \googlemap{Cardiff, Wales}, for half a year at university with many international students, where I studied and shared an apartment with different foreigners. %
+\newline 
+Attended several courses at universities abroad, with many Europeans and people all around the globe. %
+\newline 
+Work at Red Hat and at CERN prepared me for cooperation within international team and communicate every day with colleagues all around the globe - from US, Hungary and Russia to India and China.
+}
 
 \section{References}
-% Libin Liu (刘俐斌)
-\cvdoublecolumn{\cvreference{Liu Libin}
-    {\emph{Red Hat} - Quality Assurance Engineer}
-    {9/F, North Tower C, Raycom Infotech Park No.2, Ke Xueyuan Nanlu}
-	{Haidian, Beijing 100080, China}
-    {}
-    {\href{mailto:liliu@redhat.com}{liliu@redhat.com}}
-    {\href{tel:+861062608319}{+86 10 62608319}}%
+\cvdoublecolumn{\cvreference{\href{https://www.linkedin.com/in/bukowiec/}{Sebastian Bukowiec}}
+    {\emph{CERN} -- Staff member}
+	{CERN, Office 31/1-028}
+    {CH-1211 Geneva 23, Switzerland}
+    {}    
+    {\href{mailto:sebastian.bukowiec@cern.ch}{sebastian.bukowiec@cern.ch}}
+    {\href{tel:+41227678086}{+41 22 76 78086}}
     }
 {\cvreference{\href{https://www.linkedin.com/in/martinkoci}{Martin Kočí}}
-    {\emph{Red Hat} - Quality Engineering Manager}
+    {\emph{Red Hat} -- Quality Engineering Manager}
     {Purkyňova 3080/97B}
     {Brno 612 45, Czech Republic}
     {}
     {\href{mailto:mkoci@redhat.com}{mkoci@redhat.com}}
-    {\href{tel:+420702204894}{+420 702 204 894}}%
-    }
-\cvdoublecolumn{\cvreference{\href{https://www.linkedin.com/in/bukowiec/}{Sebastian Bukowiec}}
-    {\emph{CERN} staff member}
+    {\href{tel:+420702204894}{+420 702 204 894}}
+    }    
+
+% Libin Liu (刘俐斌)
+\cvdoublecolumn{\cvreference{Liu Libin}
+    {\emph{Red Hat} -- Quality Assurance Engineer}
+    {9/F, North Tower C, Raycom Infotech Park No.2, Ke Xueyuan Nanlu}
+	{Haidian, Beijing 100080, China}
     {}
-	{CERN, Office 31/1-028}
-    {CH-1211 Geneva 23, Switzerland}
-    {\href{mailto:sebastian.bukowiec@cern.ch}{sebastian.bukowiec@cern.ch}}
-    {\href{tel:+41227678086}{+41 22 76 78086}}%
+    {\href{mailto:liliu@redhat.com}{liliu@redhat.com}}
+    {\href{tel:+861062608319}{+86 10 62608319}}
     }
 {
 %\cvreference{\href{https://www.linkedin.com/in/martinkoci}{Martin Kočí}}
@@ -214,7 +222,9 @@ Working at Red Hat in international team and communicate every day with colleagu
 %    {}
 %    {\href{mailto:mkoci@redhat.com}{mkoci@redhat.com}}
 %    {\href{tel:+420702204894}{+420 702 204 894}}%
-    }    
+    } 
+
+   
 
 \end{document}
 
