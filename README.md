@@ -1,5 +1,5 @@
 # CV latex template
-Using moderncv with moderntimeline packages.
+Using moderncv with moderntimeline package.
 
-Latest version should be [main.pdf](main.pdf) file. Could be not finished.
+Latest version is the [kvitajakub-CV.pdf](kvitajakub-CV.pdf) file.
 Old versions in [old](old) directory.
