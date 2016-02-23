@@ -68,7 +68,7 @@
 \email{kvitajakub@gmail.com}                               % optional, remove / comment the line if not wanted
 \homepage{www.linkedin.com/in/kvitajakub}    % optional, remove / comment the line if not wanted
 %\extrainfo{additional information}                 % optional, remove / comment the line if not wanted
-\photo[100pt][0.4pt]{fig/2014.jpg}                 % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+\photo[100pt][0.4pt]{fig/2016.jpg}                 % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
 %\quote{Some quote}                                 % optional, remove / comment the line if not wanted
 
 % to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
@@ -89,18 +89,19 @@
 \makecvtitle
 %\justify
 \section{Education}
-\tlcventry{2013}{2016}{M.Sc.}{\BUT}{Faculty of Information Technology}{\googlemap{Brno}}{Computer Graphics and Multimedia course.}
-\tlcventry{2013}{2014}{M.Sc.}{\href{http://www.southwales.ac.uk/}{University of South Wales}}{Faculty of Computing, Engineering and Science}{\googlemap{Cardiff}}{Exchange student, Erasmus programme.}
+\tlcventry{2013}{2016}{M.Sc.}{\BUT}{Faculty of Information Technology}{\googlemap{Brno}}{}
+\tlcventry{2013}{2014}{M.Sc.}{\href{http://www.southwales.ac.uk/}{University of South Wales}}{Faculty of Computing, Engineering and Science}{\googlemap{Cardiff}}{}
 \tlcventry{2010}{2013}{B.Sc.}{\BUT}{Faculty of Information Technology}{\googlemap{Brno}}{}
 
 \section{Experience}
 %\subsection{Vocational}
 {\tltextstart[base]{\scriptsize}
-	\tllabelcventry{2015.7}{2015.8}{2015/7 -- 2015/8}{OpenLab Summer Student}{\href{http://openlab.web.cern.ch/}{CERN}}{\googlemap{Genève}}{}{Internship at \emph{Cloud \& Virtualization} team. I explored solutions for archiving Openstack Cinder volumes using Cinder backup feature and existing CERN infrastructure. Using CERN OpenStack cloud, Ceph clusters, TSM tape storage.}
+	\tllabelcventry{2015.7}{2015.8}{2015/7 -- 2015/8}{OpenLab Summer Student}{\href{http://openlab.web.cern.ch/}{CERN}}{\googlemap{Geneve}}{}{I worked in the \emph{Cloud \& Virtualization} team on configuring backends and backups for Openstack Cinder volumes. I used Ceph RBD and TSM clients for backends.}
 
-	\tllabelcventry{2015.1}{2015.6}{2015/2 -- 2015/6}{Quality Assurance Engineer}{\href{www.redhat.com}{Red Hat}}{\googlemap{Brno}}{}{Internship at \emph{REST} team focused on Pulp API testing on Amazon EC2 and Openstack cloud. Using Python and Nosetest.}
+	\tllabelcventry{2015.1}{2015.6}{2015/2 -- 2015/6}{Quality Assurance Engineer}{\href{www.redhat.com}{Red Hat}}{\googlemap{Brno}}{}{Internship at \emph{REST} team -  we had been creating test cases for the Pulp project with REST API Python tests, Nosetests and communicated with the developers.}
 }
-\tlcventry{2014}{2015}{Quality Assurance Engineer}{\href{www.redhat.com}{Red Hat}}{\googlemap{Brno}}{}{Internship at \emph{Subscriptions} team focused on testing CDN content and subscriptions of customers. Everyday communication with American and Chinese colleagues.}
+\tlcventry{2014}{2015}{Quality Assurance Engineer}{\href{www.redhat.com}{Red Hat}}{\googlemap{Brno}}{}{Internship at \emph{Subscriptions} team - content and SKU testing. Testing subscriptions of customers and CDN content with Python and Redmine+Trac. Team was scattered around the world with members in China, India, US and Europe.}
+
 %Detailed achievements:%
 %\begin{itemize}%
 %\item Achievement 1;
@@ -132,16 +133,16 @@
 \section{Languages}
 \cvitemwithcomment{Czech}{native}{}
 \cvitemwithcomment{English}{fluent}{Level C1 certificate. Can use language flexibly and effectively.}
-\cvitemwithcomment{Russian}{pre-intermediate}{Can understand and deal with most common situations.}
 \cvitemwithcomment{Slovak}{proficient}{Able to communicate at social, academic and professional level.}
+\cvitemwithcomment{Russian}{pre-intermediate}{Can understand and deal with most common situations.}
 
 \section{Skills}
 %\cvdoubleitem{category 1}{XXX, YYY, ZZZ}{category 4}{XXX, YYY, ZZZ}
 %\cvdoubleitem{category 2}{XXX, YYY, ZZZ}{category 5}{XXX, YYY, ZZZ}
 %\cvdoubleitem{category 3}{XXX, YYY, ZZZ}{category 6}{XXX, YYY, ZZZ}
-\cvitem{Languages}{Python, Java, C/C++, Bash, SQL}
-\cvitem{Software}{OpenStack, Ceph, UNIX/Linux, Git, Trac, OpenGL, OpenCV, Matlab}
-\cvitem{Concepts}{machine learning, threading, TCP/IP, network administration and security, rendering, 3D modeling, computer vision, databases, software development}
+\cvitem{Languages}{Python, Lua, Java, C/C++, Bash, SQL}
+\cvitem{Software}{Torch, Git, OpenStack, Ceph, UNIX/Linux, Trac, OpenGL, OpenCV, Matlab}
+\cvitem{Concepts}{machine learning, software development, virtualization, quality assurance, rendering, 3D modeling, computer vision, databases}
 
 
 %\section{Bachelor thesis}
@@ -151,40 +152,26 @@
 
 \section{Projects}
 %Processor Cooler Simulation
-\cventry{OpenMP, OpenMPI}{\href{https://github.com/kvitajakub/coolerSimulation}{Processor Cooler Simulation}}{2015}{\BUT}{}{Parallel simulation of heat diffusion in cooler mounted on processor. Two implementations created - first with OpenMP, second with OpenMPI.}
-
-%Number Plates Recognition
-\cventry{OpenCV}{\href{https://github.com/kvitajakub/numberPlatesRecognition}{Number Plates Recognition}}{2014}{\BUT}{}{Computer vision tool, which takes picture, detect licence plates, use classifier to recognize letters and then write them in the image.}
+\cventry{OpenMP, OpenMPI}{\href{https://github.com/kvitajakub/coolerSimulation}{Processor Cooler Simulation}}{2015}{\BUT}{}{Parallel simulation of heat diffusion in the cooler mounted on a processor. Two exactly same implementations were created, one with OpenMP library and second using OpenMPI.}
 
 %Raytracing Chess
-\cventry{rendering}{\href{https://github.com/kvitajakub/raytracedChess}{Raytracing Chess}}{2014}{\BUT}{}{Renderer of chess models which is customizable with setting positions of all the game pieces, colours, lights, etc.}
+\cventry{rendering}{\href{https://github.com/kvitajakub/raytracedChess}{Chess Renderer using Ray Tracing}}{2014}{\BUT}{}{The renderer of the chess model based on ray tracing. Simply input the positions of the figures on board. Model will be configured properly and appropriate scene will be rendered.}
 
-%Wineyard Management
-%\cventry{Java, database}{\href{https://github.com/kvitajakub/ManagingWineyards}{Wineyard Management}}{2014}{\BUT}{}{Application for managing wineyards, connected to Oracle database as backend. Using spatial objects, images and work with temporal data.}
+%Number Plates Recognition
+\cventry{OpenCV}{\href{https://github.com/kvitajakub/numberPlatesRecognition}{Automatic Number Plate Recognizer}}{2014}{\BUT}{}{Computer vision tool, which takes picture, detect licence plates, use classifier to recognize letters and then write them in the image.}
 
 % Video Stabilization
-\cventry{OpenCV}{\href{https://github.com/kvitajakub/VideoStabilization}{Video Stabilization}}{2014}{\BUT}{}{Command line tool for stabilizing videos with a lot of options. Two different methods can be used - GrayCoded bitplane matching and KLT tracker with SVD.}
-
-% Video Filtering
-%\cventry{Python, OpenCV}{\href{https://github.com/kvitajakub/VideoFiltering}{Video Filtering}}{2014}{\BUT}{}{Video player, which can apply in real time image filters, e.g. blurring and sharpening, Canny, histogram equalization, etc.}
-
-% Kinect Marathon
-%\cventry{C++, Kinect}{\href{https://github.com/kvitajakub/KinectMarathon}{Kinect app manager}}{2012}{Kinect Marathon at \BUT}{}{Application manager for Kinect our team created during 48 hours of Kinect Marathon competition. Team of 3 people.}
-
-% Die Curve
-%\cventry{Javascript}{\href{https://github.com/kvitajakub/DieCurve}{Die Curve}}{2012}{\BUT}{}{Javascript copy of famous Curve Fever game, played with multiple people on one computer.}
+\cventry{OpenCV}{\href{https://github.com/kvitajakub/VideoStabilization}{Video Stabilization}}{2014}{\BUT}{}{Command line tool for stabilizing videos. Two different methods - GrayCoded bitplane matching and KLT tracker and SVD.}
 
 % Lua Interpreter
-\cventry{C, interpreters}{\href{https://github.com/kvitajakub/interpreterLua}{Lua Interpreter}}{2011}{\BUT}{}{Compiler of part of Lua to intermediate code, which was then interpreted. Grammars, parsing and interpreting.}
+\cventry{C, interpreters}{\href{https://github.com/kvitajakub/interpreterLua}{Lua Interpreter}}{2011}{\BUT}{}{Command-line interpreter - parse input, check syntax, compile to intermediate code and interpret it. Interpreter can deal with most common features of Lua like variables, cycles, functions,.. Can be used for real programming.}
 
 \section{Qualities}
-\cvline{Personal skills}{Strong analytical and complex thinking, focused on solving the problem and keeping schedule, direct communication, self-reflection - I can admit mistakes and be open-minded.}
+\cvline{Personal skills}{Strong analytical and complex thinking, focused on solving the problem, keeping schedule, direct communication and self-reflection - I can admit mistakes and be open-minded.}
 
-\cvline{International Experience}{I lived in \googlemap{Cardiff - UK}, for half a year at university with many international students, where I studied and shared an apartment with different foreigners. %
+\cvline{International Experience}{I lived in \googlemap{Cardiff}, where I studied for half a year at university with large international community and shared an apartment with many different foreigners. I also attended several courses at universities abroad. %
 \newline 
-I attended several courses at universities abroad, with many Europeans and people all around the globe. %
-\newline 
-Work at Red Hat and at CERN prepared me for cooperation within international team and communicate every day with colleagues all around the globe - from US, Hungary and Russia to India and China.
+Work at Red Hat and at CERN prepared me for cooperation within international team and to collaborate everyday with colleagues from different cultures.
 }
 
 \section{References}
