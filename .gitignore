@@ -1,1 +1,4 @@
-main.synctex.gz
+*.synctex.gz
+*.aux
+*.log
+*.out
