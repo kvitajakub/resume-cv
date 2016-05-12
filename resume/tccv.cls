@@ -57,10 +57,10 @@
 
 \pagestyle{empty}
 \setlength\parindent{0pt}
-\color[HTML]{303030} % Default foreground color
-\definecolor{link}{HTML}{506060} % Hyperlinks
+\color[HTML]{292929} % Default foreground color
+\definecolor{link}{HTML}{405050} % Hyperlinks
 \hypersetup{colorlinks,breaklinks,urlcolor=link,linkcolor=link}
-\setkomafont{disposition}{\color[HTML]{801010}}
+\setkomafont{disposition}{\color[HTML]{401075}}
 \setkomafont{section}{\scshape\Large\mdseries}
 
 % In tccv \part must contain the subject of the curriculum vitae.
@@ -105,16 +105,17 @@
 % \personal[optional: web site without scheme (no http:// prefix)]
 %          {address}{phone number}{email}
 % ]|
-\newcommand\personal[4][]{%
+\newcommand\personal[5][]{%
     \needspace{0.5\textheight}%
     \newdimen\boxwidth%
     \boxwidth=\dimexpr\linewidth-2\fboxsep\relax%
-    \colorbox[HTML]{F5DD9D}{%
+    \colorbox[HTML]{F6D9F6}{%
     \begin{tabularx}{\boxwidth}{c|X}
     \Writinghand & {#2}\smallskip\\
     \Telefon     & {#3}\smallskip\\
     \Letter      & \href{mailto:#4}{#4}
     \ifstrempty{#1}{}{\smallskip\\ \Lightning & \href{http://#1}{#1}}
+    \ifstrempty{#5}{}{\smallskip\\ \Lightning & \href{http://#5}{#5}}
     \end{tabularx}}}
 
 % Every \item can be followed by one or more paragraphs
