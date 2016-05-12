@@ -1,5 +1,6 @@
-# CV latex template
-Using moderncv with moderntimeline package.
+# My Latex CV and Resumé
 
-Latest version is the [kvitajakub-CV.pdf](kvitajakub-CV.pdf) file.
-Old versions in [old](old) directory.
+* Latest CV: [kvitajakub-CV.pdf](kvitajakub-CV/kvitajakub-CV.pdf).
+* Latest Resumé: [kvitajakub-resume.pdf](kvitajakub-resume/kvitajakub-resume.pdf).
+
+Old versions in the [_old/](_old/) directory.
