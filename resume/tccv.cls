@@ -58,9 +58,9 @@
 \pagestyle{empty}
 \setlength\parindent{0pt}
 \color[HTML]{292929} % Default foreground color
-\definecolor{link}{HTML}{405050} % Hyperlinks
+\definecolor{link}{HTML}{374949} % Hyperlinks
 \hypersetup{colorlinks,breaklinks,urlcolor=link,linkcolor=link}
-\setkomafont{disposition}{\color[HTML]{401075}}
+\setkomafont{disposition}{\color[HTML]{151870}}
 \setkomafont{section}{\scshape\Large\mdseries}
 
 % In tccv \part must contain the subject of the curriculum vitae.
@@ -109,7 +109,7 @@
     \needspace{0.5\textheight}%
     \newdimen\boxwidth%
     \boxwidth=\dimexpr\linewidth-2\fboxsep\relax%
-    \colorbox[HTML]{F6D9F6}{%
+    \colorbox[HTML]{d4ceff}{%
     \begin{tabularx}{\boxwidth}{c|X}
     \Writinghand & {#2}\smallskip\\
     \Telefon     & {#3}\smallskip\\
@@ -130,9 +130,9 @@
     \newcommand*\inskip{}
     \renewcommand\item[3]{%
 	\inskip%
-	{\raggedleft\sc ##1\\[1pt]}
+	{\raggedleft\textsc ##1\\[1pt]}
 	{##2}\\[2pt]
-	{\Large\it ##3}
+	{\Large\textit ##3}
 	\medskip
 	\renewcommand\inskip{\bigskip}}}
     {\bigskip}
@@ -145,9 +145,9 @@
 % ]|
 \newenvironment{yearlist}{%
     \renewcommand\item[4][]{%
-	{\sc ##2} & {\bfseries ##3} \\
-	\ifstrempty{##1}{}{& {\sc ##1} \\}
-	& {\it ##4}\medskip\\}
+	{\textsc ##2} & {\bfseries ##3} \\
+	\ifstrempty{##1}{}{& {\textsc ##1} \\}
+	& {\textit ##4}\medskip\\}
     \tabularx{\linewidth}{rX}}
     {\endtabularx}
 
